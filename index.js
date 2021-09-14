@@ -1,5 +1,20 @@
 const express = require("express");
+const morgan = require("morgan");
 const app = express();
+
+//Morgan
+morgan.token("person", (req, res) => {
+  if (req.method === "POST") {
+    return JSON.stringify(req.body);
+  }
+  return null;
+});
+
+app.use(
+  morgan(
+    ":method :url :status :res[content-length] - :response-time ms :person"
+  )
+);
 
 app.use(express.json());
 
