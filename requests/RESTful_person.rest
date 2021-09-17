@@ -1,4 +1,4 @@
-GET https://frozen-mountain-09673.herokuapp.com/api/persons
+GET http://localhost:3001/api/persons
 
 ###
 
