@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.static("build"));
 
 //Morgan
-morgan.token("person", (req, res) => {
+morgan.token("person", (req) => {
   if (req.method === "POST") {
     return JSON.stringify(req.body);
   }
@@ -56,7 +56,7 @@ app.get("/api/persons/:id", (req, res, next) => {
 
 app.delete("/api/persons/:id", (req, res, next) => {
   Person.findByIdAndRemove(req.params.id)
-    .then((result) => {
+    .then(() => {
       res.status(204).end();
     })
     .catch((err) => next(err));
