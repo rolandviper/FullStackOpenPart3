@@ -2,19 +2,19 @@ GET http://localhost:3001/api/persons
 
 ###
 
-GET https://frozen-mountain-09673.herokuapp.com/api/persons/1
+GET http://localhost:3001/api/persons/api/persons/6144348aeaa43adbb5349b79
 
 ###
 
-GET https://frozen-mountain-09673.herokuapp.com/info
+GET http://localhost:3001/api/persons/info
 
 ###
 
-DELETE https://frozen-mountain-09673.herokuapp.com/api/persons/4
+DELETE http://localhost:3001/api/personsapi/persons/4
 
 ###
 
-POST https://frozen-mountain-09673.herokuapp.com/api/persons HTTP/1.1
+POSThttp://localhost:3001/api/persons/api/persons HTTP/1.1
 Content-Type: application/json
 
 {
